@@ -13,7 +13,7 @@ public class DestinationController : Controller
         _context = context;
     }
 
-    public IActionResult Detail2(int id)
+    public IActionResult Detail(int id)
     {
         var destination = _context.Destinations
             .Include(destination => destination.Entertainments)

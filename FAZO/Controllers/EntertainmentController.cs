@@ -20,9 +20,9 @@ public class EntertainmentController : Controller
         if(model.DestinationId.HasValue)
             entertainment = entertainment.Where(x => x.DestinationId == model.DestinationId);
         if(model.ServiceId.HasValue)
-            entertainment = entertainment.Where(x => x.ServiceId == model.ServiceId);
+            entertainment = entertainment.Where(x => x.EntertainmentServices.Any(y=>y.ServiceId ==model.ServiceId));
         if(model.ServiceCategoryId.HasValue) 
-            entertainment = entertainment.Where(x => x.Service.ServiceCategoryId == model.ServiceCategoryId);
+            entertainment = entertainment.Where(x => x.EntertainmentServices.Any(y=>y.Service.ServiceCategoryId == model.ServiceCategoryId));
         
         model.Entertainments = entertainment
             .Select(x => new EntertainmentSearchEntertainmentViewModel

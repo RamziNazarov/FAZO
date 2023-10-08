@@ -102,16 +102,16 @@
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative h-100">
                     <div class="position-absolute">
-                        <img  src="~/img/output_2.jpg" style="object-fit: cover;">
-                        <img src="~/img/Titan (Saturn's Moon).jpg" alt="">
+                        <img  src="~/img/home/output_2.jpg" style="object-fit: cover;">
+                        <img src="~/img/home/Titan (Saturn's Moon).jpg" alt="">
                     </div>
                     <div class="position-absolute">
-                        <img src="~/img/Лунаход.jpg" alt="">
-                        <img src="~/img/Астероид.jpg" alt="">
+                        <img src="~/img/home/Астероид.jpg" alt="">
+                        <img src="~/img/home/Лунаход.jpg" alt="">
                     </div>
                     <div class="position-absolute">
-                        <img src="~/img/NASCAR - MARS.jpg" alt="">
-                        <img src="~/img/Pluto (Dwarf Planet).jpg" alt="">
+                        <img src="~/img/home/NASCAR - MARS.jpg" alt="">
+                        <img src="~/img/home/Pluto (Dwarf Planet).jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -121,10 +121,10 @@
                     <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
                     <p>Whether you want to enjoy a relaxing vacation on the Moon, witness the majestic rings of Saturn, or participate in scientific research on Mars, we have something for everyone. You can choose from a variety of packages and services that suit your preferences and budget.                       <div class="row mb-4">
                         <div class="col-6">
-                            <img class="img-fluid-1" src="~/img/квардрациклы на марсе.jpg" alt="">
+                            <img class="img-fluid-1" src="~/img/home/квардрациклы на марсе.jpg" alt="">
                         </div>
                         <div class="col-6">
-                            <img class="img-fluid-1" src="~/img/output_532757818_0.jpg" alt="">
+                            <img class="img-fluid-1" src="~/img/home/output_532757818_0.jpg" alt="">
                         </div>
                     </div>
                     <a href="" class="btn btn-primary mt-1">Explore</a>
@@ -191,7 +191,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="~/@destination.CoverUrl" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" asp-controller="Destination" asp-action="Detail2" asp-route-id="@destination.Id">
+                        <a class="destination-overlay text-white text-decoration-none" asp-controller="Destination" asp-action="Detail" asp-route-id="@destination.Id">
                             <h5 class="text-white">@destination.Name</h5>
                         </a>
                     </div>
@@ -214,7 +214,7 @@
             {
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <a asp-controller="ServiceCategory" asp-action="Detail2" asp-route-id="@service.Id"> <i class="fa fa-2x @(service.Icon) mx-auto mb-4"></i></a>
+                        <a asp-controller="ServiceCategory" asp-action="Detail" asp-route-id="@service.Id"> <i class="fa fa-2x @(service.Icon) mx-auto mb-4"></i></a>
                         <h5 class="mb-2">@service.Name</h5>
                         <p class="m-0">@service.Description</p>
                     </div>
@@ -239,7 +239,7 @@
                         </h1>
                         <p>We are committed to transforming space tourism into an extraordinary experience that transcends boundaries and enables ordinary people to realize their dreams of venturing beyond Earth's confines.
                         </p>
-                        <img class="img-fluidd" src="~/img/about-1.jpg" >
+                        <img class="img-fluidd" src="~/img/home/photo_2023-10-08_16-42-23.jpg" >
                     </div>
                     <div class="col-6">
                         <h1>
@@ -247,7 +247,7 @@
                         </h1>
                         <p>Our vision is to be at the forefront of the space tourism industry, leading the way in pioneering new frontiers, technologies, and experiences. We envision a future where space travel becomes an integral part of human life, inspiring awe, fostering scientific curiosity, and reshaping our perception of our place in the universe.
                         </p>
-                        <img class="img-fluid" src="~/img/about-2.jpg" alt="">
+                        <img class="img-fluid" src="~/img/home/photo_2023-10-08_16-42-51.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -256,3 +256,56 @@
 </div>
 
 <!-- About End -->
+
+ <!-- Feature Start -->
+ <div class="feature-start">
+    <h1>
+        Values:
+    </h1>
+    <div class="container-fluid pb-5">
+        <div class="container pb-5">
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-money-check-alt text-white"></i>
+                        </div>
+                        
+                        <div class="d-flex flex-column">
+                            <h5 class="">Pioneering Spirit:</h5>
+                            <p class="m-0">We embrace a pioneering spirit, pushing the boundaries of what is possible and challenging conventional notions of space tourism. We continuously seek innovative solutions to make space travel more accessible and captivating for all.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-award text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Safety and Reliability:</h5>
+                            <p class="m-0"> Ensuring the safety and well-being of our passengers is paramount. We adhere to the highest standards of safety protocols, employing cutting-edge technologies and rigorous testing to provide a secure and reliable space travel experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-globe text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class=""> Exploration and Discovery:</h5>
+                            <p class="m-0">We recognize space travel as an opportunity for exploration and discovery. By facilitating close encounters with celestial bodies and unique extraterrestrial environments, we aim to foster scientific curiosity, inspire wonder, and enhance our understanding of the universe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+ </div>
+    <!-- Feature End -->

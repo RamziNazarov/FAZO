@@ -13,7 +13,7 @@ public class ServiceCategoryController : Controller
         _context = context;
     }
     
-    public IActionResult Detail2(int id)
+    public IActionResult Detail(int id)
     {
         var serviceCategory = _context.ServiceCategories
             .Include(serviceCategory => serviceCategory.Services)
@@ -22,6 +22,7 @@ public class ServiceCategoryController : Controller
             return NotFound();
         var serviceCategoryViewModel = new ServiceCategoryDetailViewModel
         {
+            CoverUrl = serviceCategory.CoverUrl,
             Services = serviceCategory.Services.Select(x => new ServiceViewModel
             {
                 Id = x.Id,

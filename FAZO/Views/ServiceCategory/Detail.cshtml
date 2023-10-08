@@ -182,16 +182,15 @@
         <div class="container-fluid">
             <div class="container-lg">
                 <nav class="navbar">
-                     <div> <h1 class="m-0 text-primary"> FAZO</h1>
+                    <div> <h1 class="m-0 text-primary"> FAZO</h1>
                     </div>
                     <div class="navbar-nav">
                         <a asp-action="Index" asp-controller="Home" class="nav-item nav-link @(ViewData["ActivePage"] == "Home" ? "active" : "")">Home</a>
-                        <a asp-action="About" asp-controller="Home" class="nav-item nav-link @(ViewData["ActivePage"] == "About" ? "active" : "")">About</a>
-                        <a asp-action="Services" asp-controller="Home" class="nav-item nav-link @(ViewData["ActivePage"] == "Services" ? "active" : "")">Services</a>
-                        <a asp-action="Search" asp-controller="Entertainment" class="nav-item nav-link @(ViewData["ActivePage"] == "Search" ? "active" : "")">Tour Packages</a>
+                        <a asp-action="Search" asp-controller="Entertainment" class="nav-item nav-link @(ViewData["ActivePage"] == "Search" ? "active" : "")">Entertainments</a>
                     </div>
                 </nav>
             </div>
+                 <img src="~/@Model.CoverUrl" class="education-header" width="100%" style="max-height: 850px;">
         </div>
     </header>
 

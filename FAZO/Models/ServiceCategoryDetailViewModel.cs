@@ -2,6 +2,7 @@
 
 public class ServiceCategoryDetailViewModel
 {
+    public string CoverUrl { get; set; }
     public List<ServiceViewModel> Services { get; set; }
 }
 
