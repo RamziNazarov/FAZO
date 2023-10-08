@@ -1,0 +1,82 @@
+﻿@model DestinationDetailViewModel
+
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="max-height: 850px;">
+                <img class="w-100" src="~/@Model.CoverUrl" alt="Image">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Service Start -->
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Planet information</h6>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <h5 class="mb-2">Length of Day (Year):</h5>
+                    <p class="m-0">@Model.DayLength</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <h5 class="mb-2">Number of Moons:</h5>
+                    <p class="m-0">@Model.MoonsCount</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <h5 class="mb-2">Temperature:</h5>
+                    <p class="m-0">@Model.Temperature</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <h5 class="mb-2">Atmospheric Pressure:</h5>
+                    <p class="m-0">@Model.AtmospherePressure</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <h5 class="mb-2">Surface Type:</h5>
+                    <p class="m-0">@Model.SurfaceType</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+<!-- Packages Start -->
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Entertainments</h6>
+        </div>
+        <div class="row">
+            @foreach (var entertainment in Model.Entertainments)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img style="width: 100%; height: auto;" src="~/@entertainment.CoverUrl" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="m-0">@entertainment.Name</h5>
+                            </div>
+                            <p class="text-decoration-none">@entertainment.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- Packages End -->

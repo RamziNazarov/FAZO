@@ -1,0 +1,280 @@
+﻿@model ServiceCategoryDetailViewModel
+
+@{
+    Layout = null;
+}
+
+
+<style>
+    body {
+        margin: 0;
+    }
+    
+    .mars-header {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .container {
+        padding: 0 22px;
+        max-width: 1168px;
+        margin: 0 auto;
+    }
+    
+    header {
+        position: relative;
+        margin-top: 42px;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        top: -42px;
+        right: 290px;
+        width: 1018px;
+        height: 84px;
+        background-color: white;
+        align-items: center;
+    }
+    
+    .navbar h1 {
+        font-weight: 700;
+        font-size: 40px;
+    }
+    
+    .navbar span {
+        color: #7AB730;
+    }
+    
+    .navbar-nav a {
+        padding: 30px 15px;
+        color: #212121 ;
+        font-weight: 700 ;
+        text-decoration: none ;
+        font-size: 16px ;
+        font-family: Montserrat;
+    }
+    
+    .navbar-nav a:hover {
+        cursor: pointer;
+        color: #7AB730;
+    }
+    
+    .mars-header-text {
+        position: absolute;
+        max-width: 1168px;
+        width: 100%;
+        top:875px ;
+        transform: translateY(-60%);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(35px);
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+    }
+    
+    .mars-header-text div {
+        width: 230px;
+        padding: 0 25px;
+        border-right: 1px solid rgba(157, 172, 184, 0.4);
+    }
+    
+    .mars-header-text div:last-child {
+        border-right:0
+    }
+    
+    .mars-header-text h5 {
+        color: #081F32;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 160%; 
+    }
+    
+    .maxwell_montes {
+        padding-top: 320px;
+        background-color: antiquewhite;
+        padding-bottom: 150px;
+    }
+    
+    .top-entertainment {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .top-entertainment-text {
+        width: 555px;
+        height: 337px;
+        text-align: center;
+        border-radius: 18px;
+        backdrop-filter: blur(1px);
+        background: rgba(93, 86, 86, 0.2);
+        font-family: Montserrat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .top-entertainment img {
+        width: 555px;
+        height: 337px;
+    }
+    
+    .maxwell_montes-img {
+        border-radius: 18px;
+    }
+    
+    .maxwell_montes-text {
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        background: rgba(234, 225, 225, 0.2);
+        width: 450px;
+        position: absolute;
+        bottom: 5px;
+        padding-left: 10px;
+        font-family: Montserrat;
+        font-weight: bold;
+    }
+    
+    .footer-mars {
+        background-color: black;
+        padding: 50px 0;
+    }
+    
+    .footer-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer-text h1 {
+        margin: 0;
+        color: white;
+        
+    }
+    
+    .footer-text p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.5) ;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education </title>
+    <link rel="stylesheet" href="~/css/Services.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="container-lg">
+                <nav class="navbar">
+                     <div> <h1 class="m-0 text-primary"> FAZO</h1>
+                    </div>
+                    <div class="navbar-nav">
+                        <a asp-action="Index" asp-controller="Home" class="nav-item nav-link @(ViewData["ActivePage"] == "Home" ? "active" : "")">Home</a>
+                        <a asp-action="About" asp-controller="Home" class="nav-item nav-link @(ViewData["ActivePage"] == "About" ? "active" : "")">About</a>
+                        <a asp-action="Services" asp-controller="Home" class="nav-item nav-link @(ViewData["ActivePage"] == "Services" ? "active" : "")">Services</a>
+                        <a asp-action="Search" asp-controller="Entertainment" class="nav-item nav-link @(ViewData["ActivePage"] == "Search" ? "active" : "")">Tour Packages</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="education">
+        <div class="container">
+            @for(var i =0; i < Model.Services.Count; i+=3)
+            {
+                <div class="education-research">
+                    <div class="education-research-block">
+                        <img src="~/@Model.Services[i].CoverUrl" class="">
+                        <div class="education-research-text">
+                            <div>
+                                <h1>@Model.Services[i].Name </h1>
+                                <span>
+                                    @Model.Services[i].Duration
+                                </span>
+                            </div>
+                            <p>
+                                @Model.Services[i].Description
+                            </p>
+                            <img src="~/@Model.Services[i].CoverUrl" class="education-img">
+                        </div>
+                    </div>
+                    @if (i + 1 < Model.Services.Count)
+                    {
+                        <div class="education-research-block">
+                            <img src="~/@Model.Services[i + 1].CoverUrl" alt="">
+                            <div class="education-research-text">
+                                <div>
+                                    <h1>
+                                        @Model.Services[i + 1].Name
+                                    </h1>
+                                    <span>
+                                        @Model.Services[i + 1].Duration
+                                    </span>
+                                </div>
+
+                                <p>
+                                    @Model.Services[i + 1].Description
+                                </p>
+                                <img src="~/@Model.Services[i + 1].CoverUrl" class="education-img">
+                            </div>
+                        </div>
+                    }
+                    @if (i + 2 < Model.Services.Count)
+                    {
+                        <div class="education-research-block">
+                            <img src="~/@Model.Services[i + 2].CoverUrl" alt="">
+                            <div class="education-research-text">
+                                <div>
+                                    <h1>
+                                        @Model.Services[i + 2].Name
+                                    </h1>
+                                    <span>
+                                        @Model.Services[i + 2].Duration
+                                    </span>
+                                </div>
+
+                                <p>
+                                    @Model.Services[i + 2].Description
+                                </p>
+                                <img src="~/@Model.Services[i + 2].CoverUrl" class="education-img">
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+        
+    </section>
+
+    <footer class="footer-mars">
+        <div class="container">
+            <div class="footer-text">
+                <h1>
+                    FA <span> ZO </span>
+                </h1>
+                <p>
+                    Futuristic Astral Zone Odyssey
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

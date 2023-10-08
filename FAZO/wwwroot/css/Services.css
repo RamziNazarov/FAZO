@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+}
+
+.header-services img {
+    width: 100%;
+    height: 789px;
+}
+
+
+.education {
+    padding: 40px 0;
+    background-color: antiquewhite;
+}
+
+.container {
+    padding: 0 22px;
+    max-width: 1168px;
+    margin: 0 224px;
+}
+
+.education-research {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-research:last-child {
+    justify-content: flex-start;
+}
+
+.education-research-block {
+    position: relative;
+    margin: 10px;
+}
+
+.education-research img {
+    width: 384px;
+    height: 287px;
+}
+
+.education-research-text {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 384px;
+    height: 287px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(7px);
+    background: rgba(93, 86, 86, 0.2);
+    font-size:14px ;
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.education-research-text p {
+    font-weight: 600;
+    line-height:18px;
+    margin-bottom: 0;
+}
+
+.education-research-text span {
+    font-weight: bold;
+}
+
+.education-img {
+    position: absolute;
+    right: 20px;
+    top: 57px;
+    border-radius: 50%;
+    width: 100px !important ;
+    height: 100px !important ;
+}
+
+.footer-mars {
+    background-color: black;
+    padding: 50px 0;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text h1 {
+    margin: 0;
+    color: white;
+    
+}
+
+.footer-text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5) ;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
